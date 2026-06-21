@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Checkout</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+
+<style>
+body{
+font-family:Arial;
+background:#f7f9fb;
+margin:0;
+}
+
+.container{
+max-width:900px;
+margin:auto;
+padding:40px 20px;
+}
+
+form{
+background:white;
+padding:30px;
+border-radius:12px;
+}
+
+input,select{
+width:100%;
+padding:12px;
+margin-bottom:15px;
+border:1px solid #ddd;
+border-radius:6px;
+}
+
+.btn{
+background:#1e88e5;
+color:white;
+padding:12px;
+border:none;
+width:100%;
+border-radius:6px;
+cursor:pointer;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>Checkout</h1>
+
+<form>
+
+<h3>Customer Details</h3>
+
+<input type="text" placeholder="First Name">
+<input type="text" placeholder="Last Name">
+<input type="email" placeholder="Email">
+<input type="tel" placeholder="Phone">
+
+<h3>Delivery Address</h3>
+
+<input type="text" placeholder="Address">
+<input type="text" placeholder="City">
+<input type="text" placeholder="County">
+<input type="text" placeholder="Postcode">
+
+<h3>Payment Method</h3>
+
+<select>
+<option>Credit Card</option>
+<option>PayPal</option>
+<option>Apple Pay</option>
+<option>Google Pay</option>
+</select>
+
+<button class="btn">
+Place Order
+</button>
+
+</form>
+
+</div>
+
+</body>
+</html>
