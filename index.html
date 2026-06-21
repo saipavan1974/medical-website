@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Adult Care Store | Premium Incontinence Products</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+    background:#f7f9fb;
+    color:#333;
+    line-height:1.6;
+}
+
+/* Header */
+
+header{
+    background:#ffffff;
+    box-shadow:0 2px 10px rgba(0,0,0,0.08);
+    position:sticky;
+    top:0;
+    z-index:1000;
+}
+
+.navbar{
+    max-width:1200px;
+    margin:auto;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:15px 20px;
+}
+
+.logo{
+    font-size:1.7rem;
+    font-weight:bold;
+    color:#1e88e5;
+}
+
+.nav-links{
+    display:flex;
+    gap:25px;
+}
+
+.nav-links a{
+    text-decoration:none;
+    color:#333;
+    font-weight:600;
+    transition:.3s;
+}
+
+.nav-links a:hover{
+    color:#1e88e5;
+}
+
+.btn{
+    background:#1e88e5;
+    color:#fff;
+    text-decoration:none;
+    padding:12px 25px;
+    border-radius:8px;
+    display:inline-block;
+    transition:.3s;
+}
+
+.btn:hover{
+    background:#1565c0;
+}
+
+/* Hero */
+
+.hero{
+    background:linear-gradient(
+    rgba(0,0,0,.55),
+    rgba(0,0,0,.55)),
+    url('https://images.unsplash.com/photo-1584515933487-779824d29309?auto=format&fit=crop&w=1600&q=80');
+
+    background-size:cover;
+    background-position:center;
+    min-height:80vh;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+
+    color:white;
+    padding:20px;
+}
+
+.hero-content{
+    max-width:700px;
+}
+
+.hero h1{
+    font-size:3rem;
+    margin-bottom:20px;
+}
+
+.hero p{
+    font-size:1.2rem;
+    margin-bottom:30px;
+}
+
+/* Sections */
+
+.container{
+    max-width:1200px;
+    margin:auto;
+    padding:70px 20px;
+}
+
+.section-title{
+    text-align:center;
+    margin-bottom:50px;
+}
+
+.section-title h2{
+    color:#1e88e5;
+    font-size:2rem;
+}
+
+/* Categories */
+
+.categories{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:25px;
+}
+
+.category-card{
+    background:white;
+    padding:30px;
+    border-radius:15px;
+    text-align:center;
+    box-shadow:0 5px 15px rgba(0,0,0,0.08);
+    transition:.3s;
+}
+
+.category-card:hover{
+    transform:translateY(-5px);
+}
+
+.category-icon{
+    font-size:45px;
+    margin-bottom:15px;
+}
+
+/* Products */
+
+.products{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+    gap:30px;
+}
+
+.product-card{
+    background:white;
+    border-radius:15px;
+    overflow:hidden;
+    box-shadow:0 5px 15px rgba(0,0,0,0.08);
+}
+
+.product-card img{
+    width:100%;
+    height:250px;
+    object-fit:cover;
+}
+
+.product-info{
+    padding:20px;
+}
+
+.product-info h3{
+    margin-bottom:10px;
+}
+
+.price{
+    color:#1e88e5;
+    font-size:1.3rem;
+    font-weight:bold;
+    margin-bottom:15px;
+}
+
+/* Benefits */
+
+.benefits{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
+}
+
+.benefit{
+    background:white;
+    padding:30px;
+    border-radius:15px;
+    text-align:center;
+    box-shadow:0 5px 15px rgba(0,0,0,0.08);
+}
+
+/* Testimonials */
+
+.testimonials{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:25px;
+}
+
+.testimonial{
+    background:white;
+    padding:25px;
+    border-radius:15px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.08);
+}
+
+/* Newsletter */
+
+.newsletter{
+    background:#1e88e5;
+    color:white;
+    text-align:center;
+    padding:70px 20px;
+}
+
+.newsletter input{
+    width:100%;
+    max-width:400px;
+    padding:15px;
+    border:none;
+    border-radius:8px;
+    margin-top:15px;
+}
+
+.newsletter button{
+    margin-top:15px;
+    border:none;
+    cursor:pointer;
+}
+
+/* Footer */
+
+footer{
+    background:#111827;
+    color:white;
+    padding:40px 20px;
+}
+
+.footer-content{
+    max-width:1200px;
+    margin:auto;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:30px;
+}
+
+footer a{
+    color:#ddd;
+    text-decoration:none;
+}
+
+footer a:hover{
+    color:white;
+}
+
+/* Mobile */
+
+@media(max-width:768px){
+
+.hero h1{
+    font-size:2.2rem;
+}
+
+.navbar{
+    flex-direction:column;
+    gap:15px;
+}
+
+.nav-links{
+    flex-wrap:wrap;
+    justify-content:center;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+<div class="navbar">
+
+<div class="logo">Adult Care Store</div>
+
+<div class="nav-links">
+<a href="#">Home</a>
+<a href="#">Shop</a>
+<a href="#">Categories</a>
+<a href="#">About</a>
+<a href="#">Contact</a>
+<a href="#">Cart (0)</a>
+</div>
+
+</div>
+</header>
+
+<section class="hero">
+<div class="hero-content">
+<h1>Comfort, Confidence & Protection</h1>
+
+<p>
+Premium adult incontinence products delivered discreetly across the UK.
+High-quality diapers, pull-up pants, bed pads and daily care essentials.
+</p>
+
+<a href="#" class="btn">Shop Now</a>
+</div>
+</section>
+
+<section class="container">
+
+<div class="section-title">
+<h2>Shop by Category</h2>
+</div>
+
+<div class="categories">
+
+<div class="category-card">
+<div class="category-icon">🩲</div>
+<h3>Adult Diapers</h3>
+<p>Maximum protection and comfort.</p>
+</div>
+
+<div class="category-card">
+<div class="category-icon">👖</div>
+<h3>Pull-Up Pants</h3>
+<p>Discreet everyday wear.</p>
+</div>
+
+<div class="category-card">
+<div class="category-icon">🛏️</div>
+<h3>Bed Pads</h3>
+<p>Night-time protection.</p>
+</div>
+
+<div class="category-card">
+<div class="category-icon">🧴</div>
+<h3>Skin Care</h3>
+<p>Protective creams and wipes.</p>
+</div>
+
+</div>
+
+</section>
+
+<section class="container">
+
+<div class="section-title">
+<h2>Featured Products</h2>
+</div>
+
+<div class="products">
+
+<div class="product-card">
+<img src="https://images.unsplash.com/photo-1585435557343-3b092031d4f7?auto=format&fit=crop&w=800&q=80">
+<div class="product-info">
+<h3>Premium Adult Diapers</h3>
+<div class="price">£19.99</div>
+<a href="#" class="btn">Add to Cart</a>
+</div>
+</div>
+
+<div class="product-card">
+<img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=800&q=80">
+<div class="product-info">
+<h3>Pull-Up Pants</h3>
+<div class="price">£15.99</div>
+<a href="#" class="btn">Add to Cart</a>
+</div>
+</div>
+
+<div class="product-card">
+<img src="https://images.unsplash.com/photo-1580281657527-47e2d6e69384?auto=format&fit=crop&w=800&q=80">
+<div class="product-info">
+<h3>Absorbent Bed Pads</h3>
+<div class="price">£12.99</div>
+<a href="#" class="btn">Add to Cart</a>
+</div>
+</div>
+
+</div>
+
+</section>
+
+<section class="container">
+
+<div class="section-title">
+<h2>Why Choose Us?</h2>
+</div>
+
+<div class="benefits">
+
+<div class="benefit">
+<h3>🚚 Fast Delivery</h3>
+<p>Quick UK-wide delivery.</p>
+</div>
+
+<div class="benefit">
+<h3>📦 Discreet Packaging</h3>
+<p>Privacy guaranteed.</p>
+</div>
+
+<div class="benefit">
+<h3>💳 Secure Payments</h3>
+<p>Protected transactions.</p>
+</div>
+
+<div class="benefit">
+<h3>⭐ Premium Quality</h3>
+<p>Trusted healthcare brands.</p>
+</div>
+
+</div>
+
+</section>
+
+<section class="container">
+
+<div class="section-title">
+<h2>Customer Reviews</h2>
+</div>
+
+<div class="testimonials">
+
+<div class="testimonial">
+★★★★★
+<br><br>
+Excellent quality products and quick delivery.
+<br><br>
+<strong>- John D.</strong>
+</div>
+
+<div class="testimonial">
+★★★★★
+<br><br>
+Very discreet packaging and easy ordering process.
+<br><br>
+<strong>- Sarah M.</strong>
+</div>
+
+<div class="testimonial">
+★★★★★
+<br><br>
+Affordable prices and reliable service.
+<br><br>
+<strong>- David P.</strong>
+</div>
+
+</div>
+
+</section>
+
+<section class="newsletter">
+
+<h2>Subscribe for Exclusive Offers</h2>
+
+<p>Get updates on promotions and new products.</p>
+
+<input type="email" placeholder="Enter your email">
+
+<br>
+
+<button class="btn">Subscribe</button>
+
+</section>
+
+<footer>
+
+<div class="footer-content">
+
+<div>
+<h3>Adult Care Store</h3>
+<p>
+Premium incontinence care products delivered discreetly across the UK.
+</p>
+</div>
+
+<div>
+<h3>Quick Links</h3>
+<p><a href="#">Shop</a></p>
+<p><a href="#">About Us</a></p>
+<p><a href="#">Contact</a></p>
+</div>
+
+<div>
+<h3>Customer Support</h3>
+<p>Email: support@example.com</p>
+<p>Phone: 0800 000 000</p>
+</div>
+
+</div>
+
+</footer>
+
+</body>
+</html>
